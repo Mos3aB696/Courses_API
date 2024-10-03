@@ -41,7 +41,7 @@ router
   .route("/")
   .get(
     verifyToken,
-    allowedTo(userRole.MANAGER, userRole.ADMIN),
+    allowedTo(userRole.ADMIN, userRole.MANAGER),
     userController.getAllUsers
   );
 router
@@ -50,7 +50,7 @@ router
 router.route("/login").post(userController.login);
 router
   .route("/:userId")
-  .delete(verifyToken, allowedTo(userRole.MANAGER), userController.deleteUser)
+  .delete(verifyToken, allowedTo(userRole.ADMIN), userController.deleteUser)
   .patch(userController.updateUser);
 
 module.exports = router;

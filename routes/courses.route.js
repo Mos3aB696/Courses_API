@@ -10,7 +10,7 @@ router
   .get(coursesControllers.getCourses)
   .post(
     verifyToken,
-    allowedTo(userRole.MANAGER),
+    allowedTo(userRole.ADMIN),
     coursesControllers.createCourse
   );
 
@@ -24,7 +24,7 @@ router
   )
   .delete(
     verifyToken,
-    allowedTo(userRole.MANAGER),
+    allowedTo(userRole.ADMIN),
     coursesControllers.deleteCourse
   );
 
