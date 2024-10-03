@@ -140,9 +140,9 @@ POST /api/users/register
 **Body:**
 ```json
 {
-  "firstName": "John",
-  "lastName": "Doe",
-  "email": "john@example.com",
+  "firstName": "test",
+  "lastName": "user",
+  "email": "test@example.com",
   "password": "yourpassword"
 }
 ```
